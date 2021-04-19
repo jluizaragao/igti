@@ -39,11 +39,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     testAssemblyVer2: '$(Build.SourceDirectory)/test**.js'
-
-- task: CopyFile@2
-  inputs:
-    contents: '**/*.*'
-    targetFolder: $(build.artefactStaginDirectory)
   
 - task: PublishBuildArtifacts@1
   inputs:
